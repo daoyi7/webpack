@@ -1,1 +1,0 @@
-console.log('webpack 4.0 demo')
