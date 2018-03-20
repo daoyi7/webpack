@@ -4,6 +4,16 @@ https://auth0.com/blog/webpack-4-release-what-is-new/?utm_source=dev&utm_medium=
 
 https://webpack.toobug.net/zh-cn/chapter3/common-chunks-plugin.html
 
+https://scotch.io/amp/tutorials/whats-new-in-webpack-4?__twitter_impression=true
+
+https://www.robinwieruch.de/minimal-react-webpack-babel-setup/
+
+https://auth0.com/blog/webpack-4-release-what-is-new/?utm_source=dev&utm_medium=sc&utm_campaign=webpack4_new
+
+https://gist.github.com/sokra/1522d586b8e5c0f5072d7565c2bee693
+
+https://juejin.im/entry/5aaa400e5188257bf550ca55?utm_medium=hao.caibaojian.com&utm_source=hao.caibaojian.com
+
 1. webpack 默认值
 webpack v4.0 之前，我们需要在config文件中定义入口文件和输出文件，但是在新版本中，webpack终于给定了默认值这个概念，新版本中的`entry`和`output`的默认值分别是`./src/index.js`、`./dist/main.js`。所以理论上新版本 webpack 是一个可以无需配置就能hello world的前端打包工具。
 
