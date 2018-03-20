@@ -23,7 +23,7 @@ Commons Chunk ,顾名思义是一个提取代码中公共模块的插件, 在web
 
 例如下面这个例子，就是把entry1, entry2等所有入口文件的相同模块全部提取到common.js中
 ```javascript
-const webpack = require('webpack)
+const webpack = require('webpack')
 
 module.exports = {
     ...
