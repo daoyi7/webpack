@@ -30,6 +30,7 @@ Please install 'webpack-cli' in addition to webpack itself to use the CLI.
 `webpack-cli`是`webpack`运行的命令行接口，常用配置包括输出配置、环境配置等。在4.0版本之前，`webpack-cli`是随webpack本身安装的，但是在4.0版本中，webpack团队把这个接口单独拿了出来做成了一个包。
 
 4. CommonsChunkPlugin
+删除了之前常用的`CommonsChunkPlugin`，但是新增了两个插件`splitChunks`和`runtimeChunk`
 Commons Chunk ,顾名思义是一个提取代码中公共模块的插件, 在webpack配置多入口文件的时候，它会把所有入口文件进行比较，然后相同的部分提取出来。
 
 例如下面这个例子，就是把entry1, entry2等所有入口文件的相同模块全部提取到common.js中
@@ -44,7 +45,7 @@ module.exports = {
     ...
 }
 
-`splitChunks` `runtimeChunk`
+
 
 ```
 
@@ -56,3 +57,21 @@ module.exports = {
 当然了，开发者可以使用`optimization.* `自定义运行模式。
 
 还有一个隐藏属性——`none`,禁用所有属性。
+
+6. module
+webpack4 之前模块类型只支持js一种类型，但是在新版本中模块支持`.mjs`,`.js`,`.json`,`.wasm`等类型的模块。因此webpack在`module.rules`新增了`type`属性，用来支持不同的模块类型。
+```javascript
+module: {
+    rules: [
+        {
+            test: /\.txt/,
+            loader: "raw-loader"
+        },
+        {
+            test: /\.json/,
+            loader: "file-loader",
+            type: "javascript/auto"
+        }
+    ]
+}
+```
